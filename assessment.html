@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz — MindTrack</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<header class="site-header">
+
+<nav class="nav" aria-label="Primary">
+  <a class="brand" href="home.html">MindTrack</a>
+  <ul class="links">
+    <li><a href="mood.html">Mood</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="relaxation.html">Relaxation</a></li>
+  </ul>
+</nav>
+
+</header>
+
+<main class="container">
+  <section class="quiz">
+    <h1>Self‑Reflection Quiz</h1>
+    <p class="lead">Answer honestly. Expand the key to see suggested reflections.</p>
+
+    <form method="get" action="#">
+      <fieldset class="q">
+        <legend>1) When stressed, I usually...</legend>
+        <label><input type="radio" name="q1"> Withdraw and avoid</label>
+        <label><input type="radio" name="q1"> Seek support</label>
+        <label><input type="radio" name="q1"> Take a walk or move</label>
+        <label><input type="radio" name="q1"> Scroll social media</label>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>2) My sleep in the past week was...</legend>
+        <label><input type="radio" name="q2"> Poor</label>
+        <label><input type="radio" name="q2"> Fair</label>
+        <label><input type="radio" name="q2"> Good</label>
+        <label><input type="radio" name="q2"> Excellent</label>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>3) I felt connected to others...</legend>
+        <label><input type="radio" name="q3"> Rarely</label>
+        <label><input type="radio" name="q3"> Sometimes</label>
+        <label><input type="radio" name="q3"> Often</label>
+        <label><input type="radio" name="q3"> Almost always</label>
+      </fieldset>
+
+      <div class="actions">
+        <button class="button" type="submit">Mark responses</button>
+        <a class="button ghost" href="home.html">Back home</a>
+      </div>
+    </form>
+
+    <details class="key">
+      <summary>Open suggested reflections</summary>
+      <ul>
+        <li>If you often withdraw, try a low‑effort text to a friend or a 5‑minute walk.</li>
+        <li>For poor sleep, set a consistent wind‑down time and dim lights earlier.</li>
+        <li>To feel more connected, schedule a short call or share a small win.</li>
+      </ul>
+    </details>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <p><strong>MindTrack</strong> is an educational demo. It does not diagnose or replace professional help.</p>
+</footer>
+
+</body>
+</html>

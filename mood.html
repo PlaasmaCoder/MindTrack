@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mood — MindTrack</title>
+  <link rel="stylesheet" href="mood.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="home.html">MindTrack</a>
+    <ul class="links">
+      <li><a href="mood.html">Mood</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="relaxation.html">Relaxation</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h1>Mood Check</h1>
+    <p class="lead">How are you feeling today? Select a level below.</p>
+
+    <form class="mood-scale" method="get" action="#">
+      <fieldset>
+        <legend class="sr-only">Mood scale 1–5</legend>
+
+        <label class="chip">
+          <input type="radio" name="mood" value="1">
+          <span class="face" aria-hidden="true">😭</span>
+          <span class="label">1 • Very low</span>
+        </label>
+
+        <label class="chip">
+          <input type="radio" name="mood" value="2">
+          <span class="face" aria-hidden="true">☹️</span>
+          <span class="label">2 • Low</span>
+        </label>
+
+        <label class="chip">
+          <input type="radio" name="mood" value="3">
+          <span class="face" aria-hidden="true">🙂</span>
+          <span class="label">3 • Okay</span>
+        </label>
+
+        <label class="chip">
+          <input type="radio" name="mood" value="4">
+          <span class="face" aria-hidden="true">😄</span>
+          <span class="label">4 • Good</span>
+        </label>
+
+        <label class="chip">
+          <input type="radio" name="mood" value="5">
+          <span class="face" aria-hidden="true">🤩</span>
+          <span class="label">5 • Great</span>
+        </label>
+      </fieldset>
+
+      
+      <div class="actions">
+        <button class="button" type="submit">Mark mood</button>
+        <a class="button ghost" href="home.html">Back home</a>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><strong>MindTrack</strong> is an educational demo. It does not diagnose or replace professional help.</p>
+</footer>
+</body>
+</html>
