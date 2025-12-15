@@ -1,0 +1,163 @@
+/* =========================
+   GLOBAL RESET & VARIABLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+:root {
+  --bg-main: #eef6f4;
+  --bg-card: #ffffff;
+  --primary: #4fa3a5;
+  --secondary: #7bbcbf;
+  --text-dark: #243333;
+  --text-light: #5f7c7d;
+  --shadow-soft: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  background: linear-gradient(135deg, #eaf5f3, #f7fbfa);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR (ALL PAGES)
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.navbar nav a {
+  margin-left: 22px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: var(--primary);
+}
+
+/* =========================
+   CONTAINERS
+========================= */
+.container {
+  padding: 80px 60px;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 26px;
+  padding: 30px;
+  box-shadow: var(--shadow-soft);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(79, 163, 165, 0.4);
+}
+
+.btn.secondary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.btn.secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  color: var(--text-light);
+  margin-top: 80px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .container {
+    padding: 60px 25px;
+  }
+
+  .navbar {
+    padding: 15px 25px;
+  }
+}
+
+/* =========================
+   MOOD SELECTED STATE
+========================= */
+.mood-card.active {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #e0f3f2, #ffffff);
+  box-shadow: 0 25px 60px rgba(79, 163, 165, 0.4);
+  border: 2px solid var(--primary);
+}

@@ -1,75 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mood — MindTrack</title>
-  <link rel="stylesheet" href="mood.css">
+  <meta charset="UTF-8">
+  <title>Mood Tracker | MindTrack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Common Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <nav class="nav" aria-label="Primary">
-    <a class="brand" href="home.html">MindTrack</a>
-    <ul class="links">
-      <li><a href="mood.html">Mood</a></li>
-      <li><a href="journal.html">Journal</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="relaxation.html">Relaxation</a></li>
-    </ul>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">MindTrack</div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="mood.html" class="active">Mood Tracker</a>
+    <a href="journal.html">Journal</a>
+    <a href="relax.html">Relax</a>
   </nav>
 </header>
 
-<main class="container">
-  <section class="panel">
-    <h1>Mood Check</h1>
-    <p class="lead">How are you feeling today? Select a level below.</p>
+<!-- ================= INTRO ================= -->
+<section class="container animate-in">
+  <h1 style="font-size:42px;margin-bottom:15px;">
+    Daily Mood Tracker
+  </h1>
 
-    <form class="mood-scale" method="get" action="#">
-      <fieldset>
-        <legend class="sr-only">Mood scale 1–5</legend>
+  <p style="color:var(--text-light);line-height:1.7;max-width:800px;">
+    Tracking your mood daily helps you recognize emotional patterns
+    and understand how your mental well-being changes over time.
+    <br><br>
+    Select the emoji that best represents how you feel <strong>today</strong>.
+  </p>
+</section>
 
-        <label class="chip">
-          <input type="radio" name="mood" value="1">
-          <span class="face" aria-hidden="true">😭</span>
-          <span class="label">1 • Very low</span>
-        </label>
+<!-- ================= MOOD OPTIONS ================= -->
+<section class="container">
+  <div class="feature-grid">
 
-        <label class="chip">
-          <input type="radio" name="mood" value="2">
-          <span class="face" aria-hidden="true">☹️</span>
-          <span class="label">2 • Low</span>
-        </label>
+    <div class="feature-card mood-card" data-mood="Very Happy">
+      <div style="font-size:48px;">😄</div>
+      <h3>Very Happy</h3>
+      <p>Feeling joyful, energetic, and positive.</p>
+    </div>
 
-        <label class="chip">
-          <input type="radio" name="mood" value="3">
-          <span class="face" aria-hidden="true">🙂</span>
-          <span class="label">3 • Okay</span>
-        </label>
+    <div class="feature-card mood-card" data-mood="Happy">
+      <div style="font-size:48px;">🙂</div>
+      <h3>Happy</h3>
+      <p>Feeling good and content.</p>
+    </div>
 
-        <label class="chip">
-          <input type="radio" name="mood" value="4">
-          <span class="face" aria-hidden="true">😄</span>
-          <span class="label">4 • Good</span>
-        </label>
+    <div class="feature-card mood-card" data-mood="Neutral">
+      <div style="font-size:48px;">😐</div>
+      <h3>Neutral</h3>
+      <p>Neither good nor bad.</p>
+    </div>
 
-        <label class="chip">
-          <input type="radio" name="mood" value="5">
-          <span class="face" aria-hidden="true">🤩</span>
-          <span class="label">5 • Great</span>
-        </label>
-      </fieldset>
+    <div class="feature-card mood-card" data-mood="Sad">
+      <div style="font-size:48px;">😔</div>
+      <h3>Sad</h3>
+      <p>Feeling low or emotionally drained.</p>
+    </div>
 
-      
-      <div class="actions">
-        <button class="button" type="submit">Mark mood</button>
-        <a class="button ghost" href="home.html">Back home</a>
-      </div>
-    </form>
-  </section>
-</main>
+    <div class="feature-card mood-card" data-mood="Stressed">
+      <div style="font-size:48px;">😣</div>
+      <h3>Stressed</h3>
+      <p>Feeling overwhelmed or anxious.</p>
+    </div>
 
-<footer class="site-footer">
-  <p><strong>MindTrack</strong> is an educational demo. It does not diagnose or replace professional help.</p>
+  </div>
+
+  <!-- SAVE BUTTON -->
+  <div style="text-align:center;margin-top:40px;">
+    <button class="btn primary" id="saveMoodBtn">
+      Save Today’s Mood
+    </button>
+  </div>
+</section>
+
+<!-- ================= INFO ================= -->
+<section class="container">
+  <div class="card animate-in">
+    <p style="color:var(--text-light);line-height:1.6;">
+      Your mood entries are stored locally in your browser for privacy.
+      This feature is designed to promote self-awareness and emotional reflection.
+    </p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>
+    Mood tracking is a self-awareness tool and not a diagnostic method.
+  </p>
 </footer>
+
+<script src="mood.js"></script>
 </body>
 </html>

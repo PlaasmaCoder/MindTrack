@@ -1,46 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MindTrack — Home</title>
-  <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8">
+  <title>MindTrack | Mental Well-being</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Common Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <nav class="nav">
-    <a class="brand" href="home.html">MindTrack</a>
-    <ul class="links">
-      <li><a href="mood.html">Mood</a></li>
-      <li><a href="journal.html">Journal</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="relaxation.html">Relaxation</a></li>
-    </ul>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">MindTrack</div>
+  <nav>
+    <a href="home.html" class="active">Home</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="mood.html">Mood Tracker</a>
+    <a href="journal.html">Journal</a>
+    <a href="relax.html">Relax</a>
   </nav>
 </header>
 
-<main class="container">
-  <section class="hero">
-    <h1>Welcome to MindTrack</h1>
-    <p class="lead">A simple mental wellbeing web app to reflect, relax and self-care.</p>
-    <div class="cta">
-      <a class="button" href="mood.html">Check Mood</a>
-      <a class="button ghost" href="journal.html">Write Journal</a>
+<!-- ================= HERO SECTION ================= -->
+<section class="container hero animate-in" style="display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;">
+
+  <div>
+    <h1 style="font-size:48px;margin-bottom:20px;">
+      Your Mental Well-being Matters
+    </h1>
+
+    <p style="font-size:18px;color:var(--text-light);line-height:1.7;margin-bottom:30px;">
+      MindTrack helps you understand, track, and improve your mental health
+      through evidence-based self-assessment, mood tracking, journaling,
+      and relaxation techniques.
+    </p>
+
+    <a href="assessment.html" class="btn primary">Start Assessment</a>
+    <a href="mood.html" class="btn secondary">Track Mood</a>
+  </div>
+
+  <div>
+    <img src="images/img1.jpg" alt="Calm Mind"
+         style="width:100%;border-radius:30px;box-shadow:0 20px 50px rgba(0,0,0,0.15);">
+  </div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="container">
+
+  <h2 style="text-align:center;font-size:36px;margin-bottom:50px;">
+    What MindTrack Offers
+  </h2>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;">
+
+    <!-- Assessment -->
+    <div class="card animate-in">
+      <img src="images/img5.jpg" style="width:100%;border-radius:18px;margin-bottom:15px;">
+      <h3 style="color:var(--primary);margin-bottom:10px;">
+        Mental Health Assessment
+      </h3>
+      <p style="color:var(--text-light);line-height:1.5;">
+        A structured self-assessment inspired by validated tools
+        like PHQ-9, GAD-7, WHO-5 and PSS.
+      </p>
+      <br>
+      <a href="assessment.html" class="btn secondary">Take Test</a>
     </div>
-  </section>
 
-  <section class="grid">
-    <div class="card"><h2>Mood</h2><p>Track how you feel.</p></div>
-    <div class="card"><h2>Journal</h2><p>Write your thoughts.</p></div>
-    <div class="card"><h2>Quiz</h2><p>Self-reflection quiz.</p></div>
-    <div class="card"><h2>Relax</h2><p>Calming video.</p></div>
-  </section>
-</main>
+    <!-- Mood Tracker -->
+    <div class="card animate-in">
+      <img src="images/img2.jpg" style="width:100%;border-radius:18px;margin-bottom:15px;">
+      <h3 style="color:var(--primary);margin-bottom:10px;">
+        Daily Mood Tracker
+      </h3>
+      <p style="color:var(--text-light);line-height:1.5;">
+        Track your daily emotions using emojis and
+        understand patterns over time.
+      </p>
+      <br>
+      <a href="mood.html" class="btn secondary">Track Mood</a>
+    </div>
 
-<footer class="site-footer">
-  <p>Educational demo — not medical advice.</p>
+    <!-- Journal -->
+    <div class="card animate-in">
+      <img src="images/img3.jpg" style="width:100%;border-radius:18px;margin-bottom:15px;">
+      <h3 style="color:var(--primary);margin-bottom:10px;">
+        Personal Journal
+      </h3>
+      <p style="color:var(--text-light);line-height:1.5;">
+        A private space to write thoughts, feelings,
+        gratitude, and reflections.
+      </p>
+      <br>
+      <a href="journal.html" class="btn secondary">Write Journal</a>
+    </div>
+
+    <!-- Relax -->
+    <div class="card animate-in">
+      <img src="images/img4.jpg" style="width:100%;border-radius:18px;margin-bottom:15px;">
+      <h3 style="color:var(--primary);margin-bottom:10px;">
+        Relax & Breathe
+      </h3>
+      <p style="color:var(--text-light);line-height:1.5;">
+        Calm your mind with breathing exercises,
+        calming visuals, and soothing audio.
+      </p>
+      <br>
+      <a href="relax.html" class="btn secondary">Relax Now</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>
+    © 2025 MindTrack | Educational Frontend Project  
+    <br>
+    This application is for awareness only and does not provide medical advice.
+  </p>
 </footer>
+<script src="home.js"></script>
 
 </body>
 </html>

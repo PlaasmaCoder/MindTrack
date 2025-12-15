@@ -1,48 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Relaxation — MindTrack</title>
-  <!-- <link rel="stylesheet" href="relaxation.css"> -->
+  <meta charset="UTF-8">
+  <title>Relax | MindTrack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Common Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <nav class="nav" aria-label="Primary">
-    <a class="brand" href="home.html">MindTrack</a>
-    <ul class="links">
-      <li><a href="mood.html">Mood</a></li>
-      <li><a href="journal.html">Journal</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="relaxation.html">Relaxation</a></li>
-    </ul>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">MindTrack</div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="mood.html">Mood Tracker</a>
+    <a href="journal.html">Journal</a>
+    <a href="relax.html" class="active">Relax</a>
   </nav>
 </header>
 
-<main class="container">
-  <section class="relax">
-    <h1>Relaxation — Calming Video</h1>
-    <p class="lead">Press play, breathe at your own pace, and watch the scene.</p>
+<!-- ================= INTRO ================= -->
+<section class="container animate-in">
+  <h1 style="font-size:42px;margin-bottom:15px;">
+    Relax & Unwind
+  </h1>
 
-    <div class="stage">
-      <div class="video" role="group" aria-label="Embedded calming video">
-        <!-- relaxation and yoga videos -->
-        <iframe src="https://www.youtube.com/embed/1ZYbU82GVz4"
-                title="Calming Ocean Waves — 4K"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-      </div>
+  <p style="color:var(--text-light);line-height:1.7;max-width:800px;">
+    Take a few minutes to slow down your breathing and calm your mind.
+    Controlled breathing helps activate the parasympathetic nervous system,
+    reducing stress and anxiety.
+  </p>
+</section>
+
+<!-- ================= BREATHING GUIDE ================= -->
+<section class="container">
+  <div class="card animate-in" style="text-align:center;">
+
+    <h2 style="margin-bottom:20px;color:var(--primary);">
+      Guided Breathing Exercise
+    </h2>
+
+    <!-- Visual breathing circle -->
+    <div
+      class="breath-circle"
+      style="
+        width:140px;
+        height:140px;
+        border-radius:50%;
+        background:var(--primary);
+        margin:30px auto;
+      ">
     </div>
 
-    <p class="tiny">Note: Requires internet to stream video.</p>
-    <p><a class="button ghost" href="home.html">Back home</a></p>
-  </section>
-</main>
+    <p style="font-size:16px;line-height:1.6;color:var(--text-light);">
+      Inhale for <strong>4 seconds</strong><br>
+      Hold for <strong>4 seconds</strong><br>
+      Exhale for <strong>6 seconds</strong><br><br>
+      Repeat this cycle for 2–3 minutes.
+    </p>
 
-<footer class="site-footer">
-  <p><strong>MindTrack</strong> is an educational demo. It does not diagnose or replace professional help.</p>
+    <button class="btn primary" id="startBreathingBtn" style="margin-top:20px;">
+      Start Breathing
+    </button>
+
+  </div>
+</section>
+
+<!-- ================= CALMING MEDIA ================= -->
+<section class="container">
+  <div class="card animate-in">
+
+    <h2 style="margin-bottom:15px;color:var(--primary);">
+      Calming Audio / Video
+    </h2>
+
+    <p style="color:var(--text-light);line-height:1.6;margin-bottom:20px;">
+      You may also relax by listening to calming sounds or watching peaceful visuals.
+    </p>
+
+    <iframe
+      width="100%"
+      height="315"
+      src="https://www.youtube.com/embed/1ZYbU82GVz4"
+      title="Calming Music"
+      frameborder="0"
+      allowfullscreen
+      style="border-radius:18px;">
+    </iframe>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>
+    Relaxation techniques are supportive tools and not a substitute
+    for professional mental health care.
+  </p>
 </footer>
+
+<script src="relax.js"></script>
 </body>
 </html>

@@ -1,63 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Journal — MindTrack</title>
-  <link rel="stylesheet" href="journal.css">
+  <meta charset="UTF-8">
+  <title>Journal | MindTrack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Common Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
 
-<nav class="nav" aria-label="Primary">
-  <a class="brand" href="home.html">MindTrack</a>
-  <ul class="links">
-    <li><a href="mood.html">Mood</a></li>
-    <li><a href="journal.html">Journal</a></li>
-    <li><a href="quiz.html">Quiz</a></li>
-    <li><a href="relaxation.html">Relaxation</a></li>
-  </ul>
-</nav>
-
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">MindTrack</div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="mood.html">Mood Tracker</a>
+    <a href="journal.html" class="active">Journal</a>
+    <a href="relax.html">Relax</a>
+  </nav>
 </header>
 
-<main class="container">
-  <section class="paper">
-    <h1>Daily Journal</h1>
-    <p class="lead">Write freely. You can print or save the page from your browser. Nothing is stored.</p>
+<!-- ================= INTRO ================= -->
+<section class="container animate-in">
+  <h1 style="font-size:42px;margin-bottom:15px;">
+    Personal Journal
+  </h1>
 
-    <form class="form" method="get" action="#">
-      <label for="entry">Today I feel / think about:</label>
-      <textarea id="entry" name="entry" rows="10" placeholder="Type here..."></textarea>
+  <p style="color:var(--text-light);line-height:1.7;max-width:800px;">
+    Journaling helps you process emotions, reduce stress,
+    and improve self-awareness.
+    <br><br>
+    Write freely — this space is private and your entries
+    stay only in your browser.
+  </p>
+</section>
 
-      <div class="grid">
-        <div class="field">
-          <label for="grat1">Gratitude 1</label>
-          <input id="grat1" name="grat1" placeholder="Something I’m grateful for">
-        </div>
-        <div class="field">
-          <label for="grat2">Gratitude 2</label>
-          <input id="grat2" name="grat2" placeholder="Another small thing">
-        </div>
-        <div class="field">
-          <label for="grat3">Gratitude 3</label>
-          <input id="grat3" name="grat3" placeholder="One more">
-        </div>
-      </div>
+<!-- ================= JOURNAL CARD ================= -->
+<section class="container">
+  <div class="card animate-in">
 
-      <div class="actions">
-        <button class="button" type="submit">Mark as written</button>
-        <a class="button ghost" href="home.html">Back home</a>
-      </div>
-      
-    </form>
-  </section>
-</main>
+    <label style="font-weight:600;margin-bottom:8px;display:block;">
+      Today’s Thoughts
+    </label>
 
+    <textarea
+      id="journalText"
+      rows="10"
+      placeholder="Write about your day, thoughts, feelings, or anything on your mind..."
+      style="width:100%;padding:15px;border-radius:16px;border:1px solid #dfeeee;font-size:15px;">
+    </textarea>
 
-<footer class="site-footer">
-  <p><strong>MindTrack</strong> is an educational demo. It does not diagnose or replace professional help.</p>
+    <br><br>
+
+    <!-- GRATITUDE -->
+    <label style="font-weight:600;margin-bottom:8px;display:block;">
+      One thing I’m grateful for today
+    </label>
+
+    <input
+      type="text"
+      id="gratitudeInput"
+      placeholder="Something positive from today"
+      style="width:100%;padding:14px;border-radius:16px;border:1px solid #dfeeee;">
+
+    <br><br>
+
+    <!-- BUTTONS -->
+    <div style="display:flex;gap:15px;flex-wrap:wrap;">
+      <button class="btn primary" id="saveJournalBtn">
+        Save Entry
+      </button>
+
+      <button class="btn secondary" id="clearJournalBtn">
+        Clear
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= INFO ================= -->
+<section class="container">
+  <div class="card">
+    <p style="color:var(--text-light);line-height:1.6;">
+      Regular journaling has been shown to improve emotional regulation
+      and reduce anxiety by helping individuals express and organize their thoughts.
+    </p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>
+    Journal entries are stored locally in your browser for privacy.
+  </p>
 </footer>
 
+<script src="journal.js"></script>
 </body>
 </html>
